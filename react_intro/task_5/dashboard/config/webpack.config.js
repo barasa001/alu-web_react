@@ -8,12 +8,13 @@ module.exports = {
     },
     devtool: "inline-source-map",
     devServer: {
-      contentBase: path.join(__dirname, '../dist'),
-      port: 8564,
-      liveReload: true,
-      historyApiFallback: true,
+        contentBase: path.join(__dirname, '../dist'),
+        port: 8564,
+        liveReload: true,
+        historyApiFallback: true,
+        hot: true // Add this line to enable HMR
     },
-    mode: "production",
+    mode: "development", // Change mode to development for HMR
     module: {
         rules: [
             {
